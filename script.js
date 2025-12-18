@@ -30,7 +30,7 @@
       },
 
       // Google Sheet Apps Script endpoint (Deploy Web App)
-      WISH_ENDPOINT: "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhMTLv7MZ7VK-aDJWr9hfZC0MelXtOneRV5Lja7558w6iqZ7yyuEJhJ1eaZjJjAW-J9VO9zGfcLxBKQPv0bBheZYNb4_9f8i20EqOvFLVqudqLamlJBmEAiAhX15YUrXMsWVD7dK-s4WqGW9mPazp4KS9P-JS5i48cNKpZgHuv7w4bi-Yuf6zXzUaFxRjO0nRCw38rH9s0aqS3HmuV-nR6o30QS_zIXZnWaAM7_yKxjxOKgEjfZni5-bYYaEJSAfkhVgYLIQixYQ2QZm9Xm3uq9fa4Xsg&lib=MEGbOlqWLsRJGZu3Ea4CFnZvkCWubFdXR" // <-- dán URL Web App vào đây (nếu dùng)
+      WISH_ENDPOINT: "https://script.google.com/macros/s/AKfycbxdlUyuIA0liJ9rsiOyuViuX9z5-yTOSIgMmfs8cAiFLO966KY1VSH9Ss2ugE1RNr_A/exec" // <-- dán URL Web App vào đây (nếu dùng)
     };
 
     /* =========================
