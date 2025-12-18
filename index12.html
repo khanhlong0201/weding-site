@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Thiệp Cưới | Minh & Lan</title>
+  <meta name="description" content="Thiệp mời đám cưới online – Câu chuyện tình yêu, sự kiện, album, mừng cưới, lời chúc và chỉ đường." />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Falling petals -->
+  <canvas id="petalCanvas"></canvas>
+
+  <!-- Audio -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music/wedding.mp3" type="audio/mpeg">
+  </audio>
+  <button id="musicBtn" class="music-btn" title="Bật/Tắt nhạc">🎵</button>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <b>Minh & Lan</b>
+        <span>Thiệp mời đám cưới</span>
+      </div>
+
+      <button class="burger" id="burger">☰ Menu</button>
+
+      <div class="nav-links">
+        <a href="#story">Câu chuyện</a>
+        <a href="#events">Sự kiện</a>
+        <a href="#gallery">Album</a>
+        <a href="#gift">Mừng cưới</a>
+        <a href="#wishes">Lời chúc</a>
+        <a href="#map">Chỉ đường</a>
+      </div>
+
+      <button class="nav-cta" id="addToCalendarBtn">🗓 Xem lịch</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer" id="drawer">
+    <div class="panel">
+      <a href="#story" class="drawer-link">Câu chuyện</a>
+      <a href="#events" class="drawer-link">Sự kiện</a>
+      <a href="#gallery" class="drawer-link">Album</a>
+      <a href="#gift" class="drawer-link">Mừng cưới</a>
+      <a href="#wishes" class="drawer-link">Lời chúc</a>
+      <a href="#map" class="drawer-link">Chỉ đường</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-media" id="heroMedia"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+
+    <div class="container">
+      <div class="hero-card reveal">
+        <div class="hero-top">
+          <span class="pill">💛 Miền Tây quê mình — sông nước hiền hòa, tình yêu đậm sâu</span>
+        </div>
+
+        <div class="names">Minh &amp; Lan</div>
+
+        <p class="hero-sub">
+          Trân trọng kính mời bạn đến chung vui ngày hạnh phúc của chúng mình —<br>
+          nơi tình yêu bắt đầu bằng những điều giản dị, và lớn lên nhờ sự chân thành.
+        </p>
+
+        <div class="hero-info">
+          <span class="chip">📍 Cái Bè, Tiền Giang</span>
+          <span class="chip">📅 20.01.2026 • 10:00</span>
+          <span class="chip">👗 Dress code: Trắng / Kem / Nâu đất</span>
+        </div>
+
+        <div class="countdown" aria-label="Đếm ngược tới ngày cưới">
+          <div class="timebox"><b id="d">--</b><span>Ngày</span></div>
+          <div class="timebox"><b id="h">--</b><span>Giờ</span></div>
+          <div class="timebox"><b id="m">--</b><span>Phút</span></div>
+          <div class="timebox"><b id="s">--</b><span>Giây</span></div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#gallery">🖼 Xem ảnh cưới</a>
+          <a class="btn" href="#map">🗺 Chỉ đường</a>
+          <a class="btn ghost" href="#wishes">💌 Gửi lời chúc</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- STORY -->
+    <section id="story" class="alt">
+      <div class="section-inner">
+        <div class="kicker"><span>OUR STORY</span></div>
+        <h2 class="title reveal">Nơi tình yêu bắt đầu</h2>
+        <p class="lead reveal">
+          Tụi mình gặp nhau giữa những ngày rất bình thường — nhưng lại đủ để nhớ cả đời.
+          Càng đi cùng nhau, tụi mình càng hiểu: hạnh phúc là bình yên khi có một người để trở về.
+        </p>
+
+        <div class="timeline">
+          <div class="story-card reveal">
+            <div class="date">
+              <b>THÁNG 03 • 2022</b>
+              <span>Lần đầu</span>
+            </div>
+            <div>
+              <h3>Lần đầu gặp nhau</h3>
+              <p>Một cuộc gặp tình cờ, vài câu chào hỏi… rồi lòng bỗng thấy ấm.</p>
+            </div>
+          </div>
+
+          <div class="story-card reveal">
+            <div class="date">
+              <b>THÁNG 09 • 2022</b>
+              <span>Thân quen</span>
+            </div>
+            <div>
+              <h3>Những ngày thân quen</h3>
+              <p>Là những chiều đi dạo, những cuộc gọi khuya, và cảm giác “muốn nói chuyện thêm chút nữa”.</p>
+            </div>
+          </div>
+
+          <div class="story-card reveal">
+            <div class="date">
+              <b>THÁNG 05 • 2024</b>
+              <span>Lời hứa</span>
+            </div>
+            <div>
+              <h3>Lời hứa</h3>
+              <p>Tụi mình chọn nắm tay nhau đi tiếp — không phải vì mọi thứ hoàn hảo, mà vì tụi mình muốn cùng nhau hoàn thiện.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="couple">
+          <div class="profile reveal">
+            <div class="avatar">
+              <img src="images/wedding-01.jpg" alt="Chú rể" loading="lazy">
+            </div>
+            <div>
+              <h4>Minh <span class="role">The Groom</span></h4>
+              <p>Một người thích sự giản dị, thương gia đình, và luôn tin rằng “yêu là cùng nhau xây một mái nhà bình yên”.</p>
+            </div>
+          </div>
+
+          <div class="profile reveal">
+            <div class="avatar">
+              <img src="images/wedding-02.jpg" alt="Cô dâu" loading="lazy">
+            </div>
+            <div>
+              <h4>Lan <span class="role">The Bride</span></h4>
+              <p>Cô gái mang trái tim ấm áp, thích những điều nhỏ xíu dễ thương, và cười lên là làm cả ngày dịu lại.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events">
+      <div class="section-inner">
+        <div class="kicker"><span>THE BIG DAY</span></div>
+        <h2 class="title reveal">Sự kiện cưới</h2>
+        <p class="lead reveal">Sự hiện diện của bạn là món quà quý giá nhất trong ngày tụi mình về chung một nhà.</p>
+
+        <div class="events">
+          <div class="event reveal">
+            <div class="cover" style="background-image:url('images/wedding-03.jpg')"></div>
+            <div class="content">
+              <h3>TIỆC CƯỚI</h3>
+              <div class="line">🕙 10:00 • 20/01/2026</div>
+              <div class="line">📍 Cái Bè, Tiền Giang</div>
+              <div class="actions">
+                <a class="btn primary" href="#map">🗺 Xem bản đồ</a>
+                <button class="btn" data-ics="wedding">🗓 Thêm vào lịch</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="event reveal">
+            <div class="cover" style="background-image:url('images/wedding-04.jpg')"></div>
+            <div class="content">
+              <h3>ĐÓN KHÁCH • CHỤP ẢNH</h3>
+              <div class="line">🕘 09:00 • 20/01/2026</div>
+              <div class="line">📍 Sân nhà miền Tây (khu vực check-in)</div>
+              <div class="actions">
+                <a class="btn ghost" href="#gallery">📷 Xem album</a>
+                <button class="btn" data-ics="checkin">🗓 Thêm vào lịch</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="hint reveal" style="max-width:900px;margin:14px auto 0;text-align:center;">
+          Bạn đổi giờ/ngày/địa chỉ ở phần <b>CONFIG</b> trong JS bên dưới.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="alt">
+      <div class="section-inner">
+        <div class="kicker"><span>WEDDING ALBUM</span></div>
+        <h2 class="title reveal">Khoảnh khắc yêu thương</h2>
+        <p class="lead reveal">
+          Chạm vào ảnh để xem lớn. Album tự động load từ <b>wedding-01.jpg</b> đến <b>wedding-20.jpg</b>.
+        </p>
+
+        <div class="gallery reveal" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- GIFT -->
+    <section id="gift">
+      <div class="section-inner">
+        <div class="kicker"><span>WEDDING GIFT</span></div>
+        <h2 class="title reveal">Mừng cưới</h2>
+        <p class="lead reveal">Nếu bạn muốn gửi chút yêu thương — tụi mình xin nhận bằng tất cả sự trân trọng.</p>
+
+        <div class="gift">
+          <div class="card reveal">
+            <div class="tabs">
+              <button class="tab active" data-tab="bride">QR Cô dâu</button>
+              <button class="tab" data-tab="groom">QR Chú rể</button>
+            </div>
+
+            <div class="qr">
+              <img id="qrImg" src="qr/bride.png" alt="QR mừng cưới" loading="lazy">
+            </div>
+
+            <div class="copyline">
+              <input id="bankText" value="CÔ DÂU • NGÂN HÀNG • SỐ TK • TÊN CHỦ TK" readonly />
+              <button id="copyBtn">Copy</button>
+            </div>
+
+            <p class="note">
+              Thay QR tại: <b>assets/qr/bride.png</b> và <b>assets/qr/groom.png</b>.<br>
+              Thay thông tin ngân hàng trong biến <b>CONFIG.gift</b> ở JS.
+            </p>
+          </div>
+
+          <div class="card reveal">
+            <h3 style="margin:0 0 10px;color:#14151a;">Lời nhắn nhỏ</h3>
+            <p class="note" style="margin:0;">
+              Tụi mình rất biết ơn vì bạn đã dành thời gian ghé thăm.  
+              Dù bạn đến chung vui hay gửi lời chúc từ xa — tất cả đều là niềm hạnh phúc của tụi mình.
+            </p>
+
+            <div class="divider"></div>
+
+            <h3 style="margin:0 0 10px;color:#14151a;">Gợi ý “mừng cưới” tinh tế</h3>
+            <p class="note" style="margin:0;">
+              • Không cần số tiền lớn — chỉ cần <b>một lời chúc</b> thật lòng. <br>
+              • Nếu tiện, bạn có thể ghi “<b>Minh & Lan</b>” ở nội dung chuyển khoản để tụi mình lưu kỷ niệm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISHES -->
+    <section id="wishes" class="alt">
+      <div class="section-inner">
+        <div class="kicker"><span>GUEST BOOK</span></div>
+        <h2 class="title reveal">Gửi lời chúc</h2>
+        <p class="lead reveal">Một lời chúc của bạn chắc chắn sẽ làm ngày cưới của tụi mình thêm trọn vẹn.</p>
+
+        <div class="card reveal" style="max-width:900px;margin:0 auto;">
+          <form class="form" id="wishForm">
+            <div class="row">
+              <input id="wishName" placeholder="Tên của bạn *" required />
+              <input id="wishPhone" placeholder="Số điện thoại (tuỳ chọn)" />
+            </div>
+            <input id="wishRelation" placeholder="Bạn là ai của cô dâu/chú rể? (bạn bè/đồng nghiệp/anh chị...)" />
+            <textarea id="wishMessage" placeholder="Viết lời chúc / tâm thư… *" required></textarea>
+            <button class="submit" type="submit">Gửi lời chúc 💛</button>
+
+            <div class="hint">
+              ✅ Gửi lên <b>Google Sheet</b> qua Apps Script (khuyên dùng).  
+              Chỉ cần dán link Web App vào biến <b>CONFIG.WISH_ENDPOINT</b> (trong JS).
+              Nếu chưa cấu hình, form sẽ lưu tạm trên máy bạn (localStorage).
+            </div>
+          </form>
+          <div class="wish-list" id="wishList"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section id="map">
+      <div class="section-inner">
+        <div class="kicker"><span>LOCATION</span></div>
+        <h2 class="title reveal">Chỉ đường</h2>
+        <p class="lead reveal">Bạn bấm “Chỉ đường” trên Google Maps là tới liền nha 🚗💨</p>
+
+        <div class="map reveal">
+          <iframe
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=C%C3%A1i%20B%C3%A8%2C%20Ti%E1%BB%81n%20Giang&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="max-width:var(--max);margin:0 auto;">
+        <div style="font-weight:900;color:rgba(18,19,23,.92);">💛 Hân hạnh được đón tiếp quý khách 💛</div>
+        <div style="margin-top:10px;line-height:1.9;">
+          “Sông có khúc, người có lúc — tụi mình chọn lúc này để thương nhau trọn đời.”
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Gallery modal -->
+  <div class="modal" id="imgModal" aria-hidden="true">
+    <img id="modalImg" alt="Ảnh cưới xem lớn" />
+  </div>
+
+  <div class="toast" id="toast">Đã xong ✅</div>
+
+
+  <script src="script.js" defer></script> 
+
+
+</body>
+</html>
